@@ -3,8 +3,14 @@ let resetBtn = document.querySelector(".resetGame");
 let newGame = document.querySelector("#newGame");
 let msgContainer = document.querySelector(".msgContainer");
 let msg = document.querySelector("#msg");
+let bgMusic = document.querySelector("#bgMusic");
 
 let turnO = false;
+
+document.addEventListener("click", () => {
+    bgMusic.play();
+}, { once: true });
+
 const winPatterns = [
     [0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]
 ];
